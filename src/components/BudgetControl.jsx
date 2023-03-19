@@ -1,6 +1,11 @@
-import React from 'react'
-
 const BudgetControl = ({ budget }) => {
+   const formatQuantity = (cantidad) => {
+      return Number(cantidad).toLocaleString('es-PE', {
+         style: 'currency',
+         currency: 'PEN'
+      })
+   }
+
    return (
       <div className='contenedor-presupuesto contenedor sombra dos-columnas'>
          <div>
@@ -8,7 +13,13 @@ const BudgetControl = ({ budget }) => {
          </div>
          <div className='contenido-presupuesto'>
             <p>
-               <span>Presupuesto: </span> S/.{budget}
+               <span>Presupuesto: </span>{formatQuantity(budget)}
+            </p>
+            <p>
+               <span>Disponible: </span>{formatQuantity(budget)}
+            </p>
+            <p>
+               <span>Gastado: </span>{formatQuantity(0)}
             </p>
          </div>
       </div>
