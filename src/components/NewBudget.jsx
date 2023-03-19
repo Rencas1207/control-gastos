@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Message from './Message';
 
 const NewBudget = ({ budget, setBudget, setIsValidBudget }) => {
@@ -12,7 +12,6 @@ const NewBudget = ({ budget, setBudget, setIsValidBudget }) => {
       }
       setMessage('');
       setIsValidBudget(true);
-      console.log(budget);
    }
 
    return (
