@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Message from './Message';
 
 const NewBudget = ({ budget, setBudget, setIsValidBudget }) => {
+
    const [message, setMessage] = useState('');
 
    const handleBudget = (e) => {
@@ -23,7 +24,7 @@ const NewBudget = ({ budget, setBudget, setIsValidBudget }) => {
                   className='nuevo-presupuesto'
                   placeholder='Añade tu presupesto'
                   value={budget}
-                  onChange={(e) => setBudget(e.target.value)}
+                  onChange={e => setBudget(e.target.value)}
                />
             </div>
             <input type="submit" value="Añadir" />
